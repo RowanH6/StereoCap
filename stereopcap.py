@@ -1,11 +1,15 @@
 import cv2 as cv
 
+# initialize the cameras (might have to change the arguments based on your hardware)
+
 right_cam = cv.VideoCapture(1)
 left_cam = cv.VideoCapture(2) 
 
 count = 0
 
 path = '3Dcoord/capture'#input("path: ")
+
+# count 300 cycles and take a picture at the end
 
 while True:
     cl, left = left_cam.read()
